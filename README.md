@@ -27,9 +27,9 @@ Separate linear regressions of birth weight on the covariates are fitted for non
 
 $$\bar Y_A - \bar Y_B = \underbrace{(\bar X_A - \bar X_B)^\top \hat\beta_B}_{\text{endowments}} + \underbrace{\bar X_B^\top(\hat\beta_A - \hat\beta_B)}_{\text{coefficients}} + \underbrace{(\bar X_A - \bar X_B)^\top(\hat\beta_A - \hat\beta_B)}_{\text{interaction}}$$
 
-**Twofold decomposition** with pooled coefficients $\beta^*$, taken from a pooled model that includes a group indicator (Jann, 2008):
+**Twofold decomposition** with pooled coefficients $\beta^{\ast}$, taken from a pooled model that includes a group indicator (Jann, 2008):
 
-$$\bar Y_A - \bar Y_B = \underbrace{(\bar X_A - \bar X_B)^\top \beta^*}_{\text{explained}} + \underbrace{\bar X_A^\top(\hat\beta_A - \beta^*) + \bar X_B^\top(\beta^* - \hat\beta_B)}_{\text{unexplained}}$$
+$$\bar Y_A - \bar Y_B = \underbrace{(\bar X_A - \bar X_B)^\top \beta^{\ast}}_{\text{explained}} + \underbrace{\bar X_A^\top(\hat\beta_A - \beta^{\ast}) + \bar X_B^\top(\beta^{\ast} - \hat\beta_B)}_{\text{unexplained}}$$
 
 - **Detailed decomposition:** the explained part is split into the contribution of each covariate.
 - **Inference:** a bootstrap stratified by group, with 2,000 resamples. 1,984 were usable. The other 16 had a binary covariate with no variation within one group, such as no hypertensive smokers in the resample.
